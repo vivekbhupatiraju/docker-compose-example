@@ -2,7 +2,6 @@ build:
     pre_ci:
       - docker build -t web .
     ci:
-      - npm install
     post_ci:
       - pip install -U docker-compose
       - docker-compose up -d
