@@ -1,8 +1,5 @@
 build:
-    pre_ci:
-      - docker build -t web .
-
-    ci:
+    post_ci:
       - sudo pip install -U docker-compose
       - docker-compose up -d
       - docker ps
